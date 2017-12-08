@@ -20,6 +20,38 @@ document.getElementById('add').addEventListener('click', function (){
     }
 });
 
+//function for removing item- for each element that gets a click
+function removeItem() {
+    var item = this.parentNode.parentNode; 
+    var parent = item.parentNode; 
+    
+    parent.removeChild(item);
+}
+
+function completeItem(){
+    var item = this.parentNode.parentNode; 
+    var parent = item.parentNode; 
+    var id = parent.id; 
+
+    //if statement w/ in the declaration
+    //if ID == TOdo, ? , if that is true, otherwise, it is To Do!
+    //check if the item should be added to completed or re-added to the To Do list.
+    
+    var target = (id === 'todo') ? document.getElementById('completed'):document.getElementById('todo'); 
+
+    parent.removeChild(item);
+    target.insertBefore(item, target.childNodes[0]);
+
+    // if (id === 'todo') {
+    //     //It is a todo item to be completed
+    //     target = document.getElementById('completed');
+    // } else {
+    //     //it is a completed item to be 're-done'
+    //     target = document.getElementById('todo');
+    // }
+
+}
+
 //adds a new item to the todo list
 function addItemTodo(text){
     var list = document.getElementById('todo');
@@ -37,11 +69,16 @@ function addItemTodo(text){
     remove.classList.add('remove');
     remove.innerHTML = removeSVG;
 
+    //add click event for removing the item 
+    remove.addEventListener('click', removeItem);
+
     var complete = document.createElement('button');
     complete.classList.add('complete');
     complete.innerHTML = completeSVG;
 
     //Add click event for completing the item
+    complete.addEventListener('click', completeItem);
+
     
     buttons.appendChild(remove);
     buttons.appendChild(complete);

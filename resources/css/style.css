@@ -21,7 +21,7 @@ header {
     top: 0; 
     left: 0;
     z-index: 5; 
-    background: #25b99a;
+    background: #25a3b9;
     box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
     /*this curves the square bottoms of the green top bar*/
     border-bottom-right-radius: 10px;
@@ -102,7 +102,7 @@ header button svg {
   }
   
   header button svg .fill {
-    fill: #25b99a;
+    fill: #25a3b9;
   }
   
   .container {
@@ -186,18 +186,20 @@ header button svg {
   
   ul.todo li .buttons button.complete svg {
     border-radius: 11px;
-    border: 1.5px solid #25b99a;
+    border: 1.5px solid #25a3b9;
   
     transition: background 0.2s ease;
   }
   
   ul.todo#completed li .buttons button.complete svg {
-    background: #25b99a;
+    background: #25a3b9;
     border: 0px;
   }
   
+  /* changes color of bar  */
   ul.todo:not(#completed) li .buttons button.complete:hover svg {
-    background: rgba(37, 185, 154, 0.75);
+    background: #25a3b9;
+
   }
   
   ul.todo:not(#completed) li .buttons button.complete:hover svg .fill {
@@ -221,7 +223,7 @@ header button svg {
   }
   
   ul.todo li .buttons button.complete svg .fill {
-    fill: #25b99a;
+    fill: #25a3b9;
   }
   
   ul.todo#completed {
