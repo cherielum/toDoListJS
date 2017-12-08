@@ -21,7 +21,6 @@ header {
     top: 0; 
     left: 0;
     z-index: 5; 
-    
     background: #25b99a;
     box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
     /*this curves the square bottoms of the green top bar*/
@@ -44,8 +43,8 @@ header input {
     /* border-top-left-radius: 5px; 
     border-bottom-left-radius: 5px;  */
     /*accomodates for the height of 50px by being set at 25px*/ 
-    /* border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px; */
+    /* 'border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;' */
     border-radius: 5px 25px 25px 5px;
     border: 0px;
     box-shadow: none; 
